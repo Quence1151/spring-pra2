@@ -3,7 +3,6 @@ package com.example.spring_pra2.beanfind;
 import com.example.spring_pra2.discount.DiscountPolicy;
 import com.example.spring_pra2.discount.FixDiscountPolicy;
 import com.example.spring_pra2.discount.RateDiscountPolicy;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
@@ -14,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.MAP;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplicationContextExtendsFindTest {
@@ -32,7 +30,6 @@ public class ApplicationContextExtendsFindTest {
         DiscountPolicy rateDiscountPolicy = ac.getBean("rateDiscountPolicy", DiscountPolicy.class);
         assertThat(rateDiscountPolicy).isInstanceOf(RateDiscountPolicy.class);
     }
-
     @Test
     @DisplayName("특정 하위 타입으로 조회")
     void findBeanByTypeSub(){
@@ -66,7 +63,5 @@ public class ApplicationContextExtendsFindTest {
         public DiscountPolicy fixDiscountPolicy(){
             return new FixDiscountPolicy();
         }
-
-
     }
 }
