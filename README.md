@@ -60,6 +60,20 @@
 >> - ISP: 인터페이스 분리 원칙 (Interface segregation principle)<br>
 >> - DIP: 의존관계 역전 원칙 (Dependency inversion principle)<br>
 
+> #### Spring Annotation
+>> - @ComponentScan
+>>   - @Component 어노테이션이 붙은 모든 클래스를 스프링 빈으로 등록.
+>>   - 빈 이름 기본전략 : MemberServiceImpl -> memberServiceImpl
+>>   - 빈 이름 직접지정 : 스프링 빈의 이름을 직접 지정하고 싶으면 @Component("원하는 이름")의 형태로 이름 지정 가능
+>> - @Component
+>>   - ComponentScan의 기본 등록 대상
+>> - @Controller
+>>   - 스프링 MVC 컨트롤러에서 사용
+>> - @Service
+>>   - 스프링 비즈니스 로직에서 사용
+>> - @Autowired
+>>   - 생성자에 사용할 경우 스프링 컨테이너가 자동으로 해당 스프링 빈을 찾아서 주입
+
 ## 추가 학습 목표<br>
 
 - H2 DB -> 오라클클라우드 DB(연결 완료)
