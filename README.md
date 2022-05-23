@@ -65,6 +65,7 @@
 >>   - @Component 어노테이션이 붙은 모든 클래스를 스프링 빈으로 등록.
 >>   - 빈 이름 기본전략 : MemberServiceImpl -> memberServiceImpl
 >>   - 빈 이름 직접지정 : 스프링 빈의 이름을 직접 지정하고 싶으면 @Component("원하는 이름")의 형태로 이름 지정 가능
+>>   - 스프링 부트로 프로젝트를 생성한 경우 @SpringBootApplication 내부에 @ComponentScan 에노테이션이 포함되어 있음
 >> - @Component
 >>   - ComponentScan의 기본 등록 대상
 >> - @Controller
