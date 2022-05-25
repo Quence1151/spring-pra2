@@ -4,7 +4,6 @@ import com.example.spring_pra2.AutoAppConfig;
 import com.example.spring_pra2.discount.DiscountPolicy;
 import com.example.spring_pra2.member.Grade;
 import com.example.spring_pra2.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -28,7 +27,6 @@ public class AllBeanTest {
 
         int rateDiscountPrice = discountService.discount(member, 20000, "rateDiscountPolicy");
         assertThat(rateDiscountPrice).isEqualTo(2000);
-
     }
 
     static class DiscountService {
@@ -41,7 +39,6 @@ public class AllBeanTest {
             System.out.println("policyMap = " + policyMap);
             System.out.println("policies = " + policies);
         }
-
         public int discount(Member member, int price, String discountCode) {
             DiscountPolicy discountPolicy = policyMap.get(discountCode);
             return discountPolicy.discount(member, price);
