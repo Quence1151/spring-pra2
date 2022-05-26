@@ -13,9 +13,9 @@ import org.springframework.context.annotation.FilterType;
         //@Coifiguration이 붙은 예제코드를 살리기 위해 사용 -> 실제 업무에선 거의 사용X
 )
 public class AutoAppConfig {
-    @Bean
-    public MemberRepository memberRepository(){
-        return new MemoryMemberRepository();
-    }
+//    @Bean
+//    public MemberRepository memberRepository(){
+//        return new MemoryMemberRepository();
+//    }
 
 }
